@@ -1,0 +1,27 @@
+{% extends 'main2.html' %}
+
+{% block content %}
+
+<div class="Fashion">
+
+     <div class="item">
+         {% for i in mbw %}
+
+            <a  class="single-itm" href="{% url 'f_details' i.id%}">
+                <div class="imge">
+                    <img src="{{i.image_url}}" alt="">
+                </div>
+                <div class="details">
+                    <span class="brand">{{i.brand}}</span>
+                    <span class="title">{{i.title|truncatewords:3}}</span>
+                    <span class="price">₹ {{i.price}}</span>
+                    <span class="size">Size: {{i.size}}</span>
+                </div>
+            </a>
+ 
+         {% endfor %}
+     </div>
+
+</div>
+    
+{% endblock content %}

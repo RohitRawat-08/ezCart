@@ -1,0 +1,54 @@
+{% load static %}
+<nav class="NavBar">
+
+    <a class="logo" href="{% url 'home'%}">
+        <div class="navlogo">
+            EZcart
+        </div>
+    </a>
+
+    <div class="navSearch_bar">
+
+        <img src="{% static 'media/search.png' %}" alt="">
+        
+        
+        <form action="{% url 'search' %}" method="get">
+            <input type="text" placeholder="Search here" name="search">
+        </form>
+    </div>
+
+    <div class="nav_items">
+        <ul type="none">    
+
+            {% if request.user.is_authenticated %}
+
+                <li>
+                    <div class="profile-container">
+                        <div class="profile-header">
+                            <img src="{% static 'media/profile.png' %}" alt="Profile">
+                            <div class="profile-text">{{request.user.username}}</div>
+                        </div>
+                        <div class="profile-popup">
+                            <a href="{% url 'profile' %}">My Profile</a>
+                            <a href="{% url 'logout' %}">Logout</a>
+                        </div>
+                    </div>                    
+                </li>
+            {% else %}
+                <li>
+                    <a href="{% url 'login' %}">
+                        <img src="{% static 'media/profile.png' %}" alt="">
+                        <div>Login</div>
+                    </a>
+                </li>
+            {% endif %}
+            
+                <li>
+                    <a href="{% url 'cart' %}">
+                        <img src="{% static 'media/cart2.svg' %}" alt="">
+                        <div>Cart</div>
+                    </a>
+                </li>
+        </ul>
+    </div>
+</nav>

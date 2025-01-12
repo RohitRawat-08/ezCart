@@ -1,0 +1,34 @@
+{% extends 'main2.html' %}
+{% load static %}
+{% block content %}
+
+    {% for e_prod in data %}
+    <a href="{% url 'Electronic_Product_Details' e_prod.id %}">
+        <div class="productItems">  
+            <img class="ref" src="{{e_prod.image_url}}" alt="">
+            <div class="details">
+                <div class="upper">
+                    <div class="title">{{e_prod.title|truncatewords:10}}</div>
+                    <div class="ratings">
+                        <div class="box">
+                            {{e_prod.rating_rate}} <img src="{% static 'media/star-solid.svg' %}" alt="">
+                        </div>
+                        <div class="spa">{{e_prod.rating_count}} Rating &</div>
+                        <div class="spa">{{e_prod.rating_review}} Review</div>
+                    </div>
+                </div>
+                <div class="lower">
+                    <ul type="none">
+                        <li>{{e_prod.highlight_1}}</li>
+                        <li>{{e_prod.highlight_2}}</li>
+                        <li>{{e_prod.highlight_3}}</li>
+                        <li>{{e_prod.highlight_4}}</li>
+                        <li>{{e_prod.highlight_5}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+        
+{% endblock content %}

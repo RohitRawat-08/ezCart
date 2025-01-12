@@ -1,0 +1,88 @@
+.Fashion{
+    /* border: solid red; */
+    min-height: 580px;
+    padding: 25px;
+    background-color: #fff;
+
+    h1{
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+.Fashion .item{
+    /* border : solid green; */
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px !important;
+    row-gap: 30px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.Fashion .item .single-itm{
+    /* border: 2px solid black; */
+    /* min-height: 350px; */
+    /* height: fit-content; */
+    width: 255px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 5px;
+    padding: 25px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    z-index: 10;
+    border-radius: 5px;
+    max-height: 455px;
+
+    .imge{
+        display: flex;
+        justify-content: center;
+    }
+    .mobile-imge img{
+        height: 240px;
+        width: 180px;
+        object-fit: contain;
+
+    }
+
+    .imge img{
+        height: 240px;
+        width: 230px;
+    }
+
+    .details{
+        display: flex;
+        flex-direction: column;
+        /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+        padding: 5px 5px 5px 10px;
+        background-color: white;
+
+        .brand{
+            font-weight: 550;
+            font-size: 16px;
+            color: gray;
+        }
+
+        .price{
+            font-weight: 600;
+            font-size: 18px;
+            margin: 5px 0px;
+        }
+
+    }
+}
+
+
+.Fashion .item .single-itm:hover
+{
+    box-shadow: 1px 1px 5px  black;
+
+    .details{
+        transform: translateY(-20px);
+        transition: .5s;
+        /* box-shadow: 4px 4px 6px rgba(0, 0, 0, .3); */
+    }
+}

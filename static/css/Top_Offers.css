@@ -1,0 +1,76 @@
+
+.top_offers{
+    height: 90vh;
+    /* border: solid red; */
+
+}
+
+.topOffers{
+    /* border : solid green; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: start;
+    justify-content: space-around;
+    margin: 0px 5px;
+    background-color: white;
+    padding-bottom: 20px;
+    min-height: 70vh;
+}
+
+
+.topOffers a{
+    text-decoration: none;
+    color: black;
+
+}
+
+
+.topOffers a .items{
+    border: .3px solid rgba(128, 128, 128, 0.384);
+    height: 350px;
+    width: 260px;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 20px 0px;
+
+
+    img{
+        height: 75%;
+        width: 71%;
+        /* align-items: center; */
+        /* border: solid blue; */
+    }
+
+    div{
+        /* border: solid yellow; */
+        width: 100%;
+        padding-left: 13px;
+        margin-top: 10px;
+    }
+    div .title{
+        /* border :solid red; */
+        font-size: 19px;
+        font-weight: 600;
+        text-align: center;
+        
+    }
+
+    div .price{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+}
+
+
+.topOffers .items:hover{
+    box-shadow: 1px 1px 7px rgba(128, 128, 128, 0.452) ; 
+    transform: translateY(-4px);
+    transition: .2s;
+}

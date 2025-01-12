@@ -1,0 +1,49 @@
+{% extends 'main3.html' %}
+{% load static %}
+
+{% block locat %}
+
+    <div class="Order">
+        
+        <div class="my_orders">
+            <div class="order-Heading">
+                <p>Your Orders</p>
+            </div>
+            {% for i in data %}
+                <div class="plased_order_item">
+                    <div class="up">
+                        <div class="order-pp">
+                            <div>
+                                <p><b>Order Placed</b></p>
+                                <p class="op">{{i.order_date}}</p>
+                            </div>
+                            <div>
+                                <p><b>Order Price</b></p>
+                                <p class="op">{{i.price}}</p>
+                            </div>
+                        </div>
+                        <div>
+                           <p><b>Order ID :</b> {{i.order_id}} </p> 
+                        </div>
+                    </div>
+
+                    <div class="down">
+                        <div class="image">
+                            <img src="{{i.img_url}}" alt="">
+                        </div>
+                        <div>
+                            <p>{{i.title}}</p> 
+                            <p>Quantity :{{i.quantity}}</p> 
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            
+
+        </div>
+        
+    </div>
+
+{% endblock locat %}
+
+

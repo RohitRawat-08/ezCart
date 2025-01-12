@@ -1,0 +1,40 @@
+{% extends 'main2.html' %}
+
+{% block content %}
+
+    <div class="specificItems">
+
+        <div class="back">
+            <a href="{% url 'Offers' %}">
+                Back
+            </a>
+        </div>
+
+        <!-- {{specific_item}} -->
+        
+        <div class="card">
+
+            <div class="left">
+                <img src="{{specific_item.image}}" alt="">
+            </div>
+            <div class="right">
+    
+                <p class="title">{{specific_item.title}}</p>
+                <p class="price"> ₹{{specific_item.price}}</p>
+                
+                <div class="rating">
+                    <p class="rating_rate">{{specific_item.rating.rate}}</p>
+                    
+                    <p class="rating_count">{{specific_item.rating.count}} rating</p>
+                </div>
+                    
+                <p class="Description"><span>Description </span>:{{specific_item.description}}</p>
+    
+            </div>
+        </div>
+        
+
+
+    </div>
+
+{% endblock content%}

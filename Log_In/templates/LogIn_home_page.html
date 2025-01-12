@@ -1,0 +1,32 @@
+{% extends 'main3.html' %}
+
+{% block locat %}
+
+    <div class="form">
+        <div class="card">
+            <div class="leftcont">
+                <div class="cont1">Login</div>
+                <div class="cont2">Get access to your Orders,</div>
+            </div>
+            <div class="rightcont">
+                <form action="" method="POST" autocomplete="off" >
+                    {% csrf_token %}
+            
+                    <input type="text" name="username" id="username" placeholder="Username" autocomplete="off">
+            
+                    <!-- <input type="email" name="email" id="email" placeholder="Email"> -->
+            
+                    <input type="password" name="password" id="password" placeholder="Password" autocomplete="off"> 
+                    
+                    <button type="submit">Login</button>
+                </form>
+        
+        
+                <a href="{% url 'New_Registration' %}">New to ezcart? Create an Account</a>
+            </div>
+        </div>
+
+    </div>
+    
+{% endblock locat %}
+    

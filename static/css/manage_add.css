@@ -1,0 +1,113 @@
+/*! manage_add css file */
+
+
+.Order {
+    max-width: 99vw;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    /* border: solid black; */
+}
+
+.my_orders {
+    border: 1px solid #7C4DFF;
+    padding: 10px;
+    width: 90%;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile_info .head {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Styling for Add Address Button */
+.add_address_btn {
+    display: inline-block;
+    background-color: #7C4DFF;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add_address_btn:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for Form */
+.Form_data {
+    /* display: none; */
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    /* border-radius: 8px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.Form_data .in{
+    display: flex;
+    gap: 10px;
+}
+.Form_data form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Form_data input,
+.Form_data select,
+.Form_data button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.Form_data input:focus{
+    outline: 2px solid #7C4DFF;
+
+}
+
+.Form_data button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Form_data button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Styling for Address Display */
+.address {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    /* border-radius: 8px; */
+    background-color: #fff;
+    margin-left: 20px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.address .up {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.address .down {
+    font-size: 14px;
+    color: #555;
+}

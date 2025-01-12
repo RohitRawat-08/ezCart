@@ -1,0 +1,106 @@
+{% extends 'main2.html' %}
+
+{% block content %}
+{% load static %}
+<div class="specificItems">
+
+    <!-- {{specific_item}} -->
+    
+    <div class="card">
+        <div class="left">
+            <img class="fashion" src="{{specific_item.image_url}}" alt="">
+            <div class="cart_buy">
+
+                {% if request.user.is_authenticated %}
+
+                <a href="{% url 'add_cart' model_name specific_item.id %}">
+                    <div class="Add_cart">Add Cart</div>
+                </a>
+                    {% if address.uname %}
+                    <a href="{% url 'buy' model_name specific_item.id %}">
+                        <div class="Buy">Buy Now</div>
+                    </a>
+                    {% else %}
+                    <a href="{% url 'manage_add' %}">
+                        <div class="Buy">Buy Now</div>
+                    </a>
+                    {% endif %}
+
+                {% else %}
+
+                <a href="{% url 'login'  %}">
+                    <div class="Add_cart">Add Cart</div>
+                </a>
+                <a href="{% url 'login'  %}">
+                    <div class="Buy">Buy Now</div>
+                </a>
+                {% endif %}
+                
+                
+            </div>
+        </div>
+
+        <div class="right">
+            <p class="title" style="color: gray;">{{specific_item.brand}}</p>
+            <p class="title">{{specific_item.title}}</p>
+            <div class="rating">
+                <p class="rating_rate">{{specific_item.rating_rate}} <img src="{% static 'media/star-solid.svg' %}" alt=""></p>
+                
+                <p class="rating_count">{{specific_item.rating_count}} Rating &</p>
+                <p class="rating_count">{{specific_item.rating_review}} Review</p>
+            </div>
+                
+            <p class="price"> ₹ {{specific_item.price}}</p>
+            <div class="offers">
+                <p><b>Available offers</b></p>
+                <p><img src="{% static 'media/tag.png' %}" alt=""> Bank Offer 5% Unlimited Cashback on Flipkart Axis Bank Credit Card</p>
+                <p><img src="{% static 'media/tag.png' %}" alt=""> Bank Offer 12% off up to ₹1,000 on HDFC Bank Pixel Credit Card EMI on 3 months tenure. Min. Txn Value: ₹7,500</p>
+                <p><img src="{% static 'media/tag.png' %}" alt=""> Bank Offer 12% off up to ₹1,500 on HDFC Bank Pixel Credit Card EMI on 6m and 9m tenure. Min Txn Value: ₹7,500</p>
+                <p><img src="{% static 'media/tag.png' %}" alt=""> Special PriceGet extra 30% off (price inclusive of cashback/coupon)</p>
+
+            </div>
+
+            <div class="detailDescription">
+                <dl>
+                    <dt>Size</dt>
+                    <dd>
+                        <ul class="list_itm">
+                            <li>{{specific_item.size}}</li>
+                        </ul>
+                    </dd>
+                    <dt>Seller</dt>
+                    <dd>
+                        <ul class="list_itm">
+                            <li>{{specific_item.seller}}</li>
+                            <li>10 Days Return Policy</li>
+                        </ul>
+                    </dd>
+                    <dt>Delever To</dt>
+
+                    {% if address.uname %}
+                        <div class="address">
+                                {% if request.user.is_authenticated %}
+                                    {{address.uname}},{{address.address}} ,{{address.city}},{{address.state}}-{{address.pincode}}
+                                {% else %}
+                                    {{address}}
+                                {% endif %} 
+                        </div>
+                    {% else %}
+                        {% if request.user.is_authenticated %}
+                            <a class="add_add" href="{% url 'manage_add' %}" >add address</a>
+                        {% else %}
+                            <a class="add_add" href="{% url 'login' %}" >add address</a>
+                        {% endif %} 
+                        
+                    {% endif  %}
+
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div>
+
+{% endblock content%}

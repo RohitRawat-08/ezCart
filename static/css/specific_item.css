@@ -1,0 +1,203 @@
+
+.specificItems{
+    /* border: solid red; */
+    height: fit-content;
+    width: 98vw;
+    display: flex;
+    margin: auto;
+    background-color: white;
+    padding-bottom: 30px;
+    position: relative;
+
+}
+
+
+.specificItems .card{
+    /* border: solid 1px grey; */
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 10px 0 30px 50px;  
+    gap: 30px;
+
+}
+
+
+.specificItems .card .left{
+    height: fit-content;
+    /* border: 2px solid rgba(56, 54, 54, 0.562); */
+    border: 2px solid #7C4DFF;
+    height: fit-content;
+    min-height: 500px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px 20px;
+    position: sticky;
+    top: 100px;
+    gap: 20px;
+    margin-top: 25px;
+
+    img{
+
+        border-radius: 2px;
+        height: 350px;
+        width: 250px;
+        cursor: pointer;
+    }
+
+    /* ! css start for Electronic_product_details.html */
+
+    .lap_cam{
+        border-radius: 2px;
+        height: fit-content;
+        max-height: 500px;
+        width: 300px;
+        object-fit: contain;
+        /* border: solid red; */
+    }
+
+    /* ! css end for Electronic_product_details.html */
+
+
+
+    .fashion{
+        /* border:solid red; */
+        height: fit-content;
+        width: 290px;
+        cursor: pointer;
+    }
+
+}
+
+.specificItems .card .left .cart_buy{
+
+    display: flex;
+    gap: 10px;
+    width: 65%;
+    justify-content: center;
+
+    .Add_cart, .Buy{
+        /* border:2px solid black; */
+        font-size: 16px;
+        font-weight: 500;
+        padding: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        width: 100%;
+    }
+    .Add_cart, .Buy{
+        background-color: #7C4DFF;
+        /* border: 1.5px solid black; */
+        color: ECEFF1;
+    }
+    .Add_cart:hover {
+        background-color: #8e6af1;
+    }
+    .Buy:hover{
+        background-color: #8e6af1;
+    }
+    /* .Buy{
+        background-color: #7C4DFF;
+        border: 1.5px solid black;
+
+    } */
+    
+}
+
+
+.specificItems  .card .right{
+    height: 100%;
+    /* border: solid blue; */
+    width: 65%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    row-gap: 10px;
+    min-height: 500px;
+    padding-top: 20px;
+    padding-right: 20px;
+
+    .title{
+        /* border: solid gold; */
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .price{
+        font-size:28px;
+        font-weight: 600;
+    }
+
+    .rating{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        
+        .rating_rate{
+            background-color: green;
+            color: white;
+            padding:5px ;
+            border-radius: 5px;
+            display: flex;
+            gap: 3px;
+
+            img{
+                margin-top: 2px;
+                height: 17px;
+            }
+        }
+        .rating_count{
+            color: grey;
+        }
+    }
+}
+
+
+.specificItems  .card .right .offers{
+        /* border: solid red; */
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        margin-bottom: 25px;
+        
+        p{
+            display: flex;
+            gap: 5px;
+
+            b{
+                margin: 10px 0px;
+            }
+            img{
+                height: 20px;
+                width: 20px;
+            }
+        }
+}
+
+
+.specificItems  .card .right .detailDescription{
+    /* border: solid red; */
+
+    dl dd .list_itm{
+        list-style: disc;
+        /* border :solid red; */
+        margin-left: 150px;
+        margin-bottom: 20px;
+        position: relative;
+        bottom: 25px;
+    }
+    .add_add{
+        border: 2px solid #7C4DFF;
+        padding: 10px;
+        margin-left: 150px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px #7C4DFF;
+    }
+}

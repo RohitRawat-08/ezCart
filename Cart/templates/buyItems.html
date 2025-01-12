@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    {% load static%}
+
+    <link rel="stylesheet" href="{% static 'css\Cart.css'%}">
+    <link rel="stylesheet" href="{% static 'css\style.css'%}">
+
+</head>
+<body>
+
+    {% include 'navBar.html' %}
+
+    <div class="Cart_home_page">
+        <div class="address">
+            <p class="sp">Shipping Address:</p>
+            <p class="ad">{{address.uname}}<br>{{address.address}} {{address.city}}<br>{{address.state}}-{{address.pincode}} </p>
+       </div>
+        <div class="cart-items-list">
+
+            <div class="items">
+                <div class="single-itm"> 
+                    <aside>
+                        <img src="{{data.image_url}}" alt="">
+                    </aside>   
+                    <article>
+                        <p class="title">{{data.title}} </p>
+                        <p class="price">₹ {{data.price}}</p>
+                        <p class="quantity">Quantity :{{price_details.quantity}} </p>
+                    </article>                
+                </div>
+                <hr>
+                <div class="order_place">
+                    <a href="{% url 'my_order' model_name data.id  %}">Place Order</a>
+                </div>
+            </div> 
+
+            <div class="amount-buy">
+                <div class="price-Detail">PRICE DETAILS</div> <hr>
+                <div class="Detail">
+                    <div class="text-data">
+                        <div>Price ({{price_details.count}} items)</div>
+                        <div>₹ {{price_details.item_amount}}</div>
+                    </div>
+                    <div class="text-data">
+                        <div>Discount</div>
+                        <div>₹ {{price_details.discount}}</div>
+                    </div>
+                    <div class="text-data">
+                        <div>Platform Fee</div>
+                        <div>₹ {{price_details.Platform_fees}}</div>
+                    </div>
+                    <div class="text-data">
+                        <div>Delivery Charges</div>
+                        <div>₹ {{price_details.delivery_charges}}</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="Total-Aount">
+                    <div>Total Amount</div>
+                    <div>₹ {{total_amount}}</div>
+                </div>
+            </div> 
+               
+        </div>
+    </div>
+    {% include 'footer.html' %}  
+</body>
+</html>

@@ -1,0 +1,250 @@
+.form{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid red; */
+
+}
+
+.form .card{
+    height: 90%;
+    width: 70vw;
+    border:  2px solid #7C4DFF;
+    display: flex;
+    /* box-shadow: 1px 1px 5px 1px black; */
+}
+
+.form .card .leftcont{
+    /* border: 2px solid red; */
+    width: 40%;
+    padding: 30px;
+    padding-top: 30px;
+    background-color: #7C4DFF;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .cont1{
+        color: white;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .cont2{
+        color: white;
+        font-size: 19px;
+        font-weight: 400;
+    }
+}
+
+.form .card .rightcont{
+    width: 60%;
+    display: flex;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    background-color: white;
+    padding: 50px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    justify-content: space-between;
+
+}
+
+.form .card .rightcont form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.form .card .rightcont form input{
+
+    height: 35px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid lightgray;
+    font-size: 15px;
+}
+
+.form .card .rightcont form input:focus{
+    border-bottom: 2px solid #7C4DFF;
+
+}
+.form .card .rightcont form button{
+    height: 45px;
+    width: 100%;
+    background-color: #7C4DFF;
+    color: #ECEFF1;
+    font-weight: 600;
+    margin: 0px;
+    font-size: 17px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+
+}
+.form .card .rightcont form button:hover{
+    background-color: #8e6af1;
+
+}
+
+.form .card .rightcont a{
+    color: #2874F0 ;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+
+
+/* My profile css */
+
+.Profile{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.Profile .left-bar{
+    height: 90%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    /* border: solid red; */
+    gap: 20px;
+}
+
+.Profile .left-bar-up{
+    background-color: white;
+    height: 15%;
+    display: flex;
+    border:  2px solid #7C4DFF;
+}
+
+.Profile .left-bar-up .profile-image{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+
+    img{
+        height: 40px;
+        width: 40px;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    a{
+        /* border: solid red; */
+        position: relative;
+        top: 15px;
+        right: 5px;
+    }
+}
+
+.Profile .left-bar-up .great-detail{
+    width: 70%;
+
+    .msg{
+        height: 50%;
+        display: flex;
+        align-items: end;
+        font-size: 13px;
+    }
+
+    .name{
+        height: 50%;
+        font-weight: 600;
+        font-size: 17px;
+    }
+}
+
+
+.Profile .left-bar-down{
+    /* background-color: white; */
+    /* border: solid red; */
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.Profile .left-bar-down .boxes{
+    height: fit-content;
+    padding: 20px;
+    padding-left: 20px ;
+    border: 2px solid #7C4DFF;
+    display: block;
+    font-size: 1rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+
+    img{
+        height: 20px;
+    }
+}
+
+.Profile .left-bar-down .boxes:hover{
+    box-shadow: 1px 1px 5px  black;
+    text-decoration: underline;
+    font-weight: 600;
+    
+    .img_sh{
+        filter: drop-shadow(10px 10px 15px black);
+    }
+
+}
+
+.Profile .left-bar-down .in_boxes{
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 20px ;
+    /* border: solid red; */
+    display: block;
+}
+
+
+.Profile .content{
+    height: 90%;
+    background-color: white;
+    box-shadow:  2px 2px 10px rgba(0, 0, 0, 0.5);
+    width: 70%;
+    /* border: solid red; */
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Profile_info.html css */
+
+.profile_info{
+    /* border : solid green; */
+    padding: 20px;
+}
+
+.profile_info .head{
+    /* border: solid red; */
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 20px;
+    text-decoration: underline;
+}
+
+.profile_info .info{
+    padding: 20px 0 20px 50px;
+    font-size: 17px;
+    
+}
+
+

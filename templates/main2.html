@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZcart</title>
+    {% load static tailwind_tags %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css\style.css'%}">
+    <link rel="stylesheet" href="{% static 'css\Top_Offers.css'%}">
+    <link rel="stylesheet" href="{% static 'css\specific_item.css'%}">
+    <link rel="stylesheet" href="{% static 'css\itemList.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css\fashion.css' %}">
+    
+    {% tailwind_css %}
+    
+</head>
+<body>
+
+    {% include 'navBar.html' %}
+    {% include 'navBar3.html' %}
+
+    
+
+    {% block content %}
+    
+    {% endblock content %}
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

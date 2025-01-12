@@ -1,0 +1,47 @@
+
+.cards{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .card{
+    /* border: solid red; */
+    height: 150px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px black;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.cards .card p:first-child{
+    /* border :solid red; */
+    font-weight: 600;
+    font-size: 1.2rem;
+
+}
+
+.cards .card p:nth-child(2){
+    /* border :solid red; */
+    padding: 2px;
+    color: gray;
+    font-size: .8rem;
+    font-weight: 500;
+
+
+}
+
+.cards .card a{
+    /* border :solid red; */
+    align-self: end;
+    padding: 2px;
+    color: blue;
+    font-size: 1rem;
+    margin-right: 20px;
+
+}

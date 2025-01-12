@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+
+{% block home%}
+
+
+
+    <div class="Fashion">
+
+        <h1>{{nodata}}</h1>
+        <div class="item">
+
+
+
+
+            {% for i in e_data %}
+
+            <a  class="single-itm" href="{% url 'Electronic_Product_Details' i.id %}">
+                <div class="mobile-imge">
+                    <img src="{{i.image_url}}" alt="">
+                </div>
+                <div class="details">
+                    <span class="brand">{{i.brand}}</span>
+                    <span class="title">{{i.title|truncatewords:3}}</span>
+                    <span class="price">₹ {{i.price}}</span>
+                </div>
+            </a>
+
+            {% endfor %}
+
+            
+            {% for i in f_data %}
+
+            <a  class="single-itm" href="{% url 'f_details' i.id%}">
+                <div class="imge">
+                    <img src="{{i.image_url}}" alt="">
+                </div>
+                <div class="details">
+                    <span class="brand">{{i.brand}}</span>
+                    <span class="title">{{i.title|truncatechars:15}}</span>
+                    <span class="price">₹ {{i.price}}</span>
+                </div>
+            </a>
+
+            {% endfor %} 
+
+        </div>
+
+    </div>
+
+   
+
+{% endblock home%}

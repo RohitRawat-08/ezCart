@@ -1,0 +1,25 @@
+{% extends 'main3.html' %}
+
+{% load static %}
+{% block locat %}
+
+    <div class="Order">
+        <div class="my_orders">
+
+            <article class="profile_info">
+                <div>
+                    <p class="head">Personal Information</p> 
+                    <p class="info" >Name: {{request.user.first_name}} {{request.user.last_name}}</p>
+                    <!-- <p class="info"> Gender : </p> -->
+                    <p class="info" >Email: {{request.user.email}} <p>
+                    <p class="info" >Phone No : 7845895625<p>
+                    <p class="info">Saved Address : </p>
+                    {% for i in data %}
+                    <p class="info">{{i.address}}, {{i.city}}, {{i.state}}-{{i.pincode}}</p>
+                    {% endfor %}
+                </div>
+            </article>   
+        </div>
+    </div>
+
+{% endblock locat %}

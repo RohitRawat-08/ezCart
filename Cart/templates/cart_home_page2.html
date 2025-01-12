@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    {% load static%}
+
+    <link rel="stylesheet" href="{% static 'css\Cart.css'%}">
+    <link rel="stylesheet" href="{% static 'css\style.css'%}">
+
+</head>
+<body>
+
+    {% include 'navBar.html' %}
+
+    <div class="Cart_home_page">
+
+        <div class="cart-items">
+            <article>Add itmes in Cart </article>
+            <a href="{% url 'home' %}">Add</a>
+        </div>
+        
+ 
+    </div>
+
+
+    {% include 'footer.html' %}
+    
+</body>
+</html>

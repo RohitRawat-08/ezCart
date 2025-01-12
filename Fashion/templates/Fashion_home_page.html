@@ -1,0 +1,21 @@
+{% extends 'main2.html' %}
+
+{% block content %}
+
+    <div class="topOffers">
+        {% for item in items %}
+            <a href="{% url 'f_details' item.id %}">
+                <div class="items">
+
+                    <img src="{{ item.image}}" alt="">
+                    <div>
+                        <div class="title">{{item.title}}</div>
+                        <div class="price">Price:₹{{item.price}}</div>
+                    </div>
+                
+                </div>
+            </a>
+        {% endfor  %}
+    </div>
+    
+{% endblock content %}
