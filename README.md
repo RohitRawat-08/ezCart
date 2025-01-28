@@ -12,3 +12,7 @@ Developed a responsive frontend using HTML, CSS, and Django templates to enhance
 ## Screenshots
 
 ![App Screenshot](https://s3.ap-south-1.amazonaws.com/rohit.rawat/images/ezcart.PNG)
+
+![App Screenshot](https://github.com/RohitRawat-08/ezCart/blob/master/static/media/cart.png)
+
+![App Screenshot](https://github.com/RohitRawat-08/ezCart/blob/master/static/media/cart2.svg)
