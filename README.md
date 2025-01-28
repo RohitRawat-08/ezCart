@@ -40,7 +40,7 @@ Developed a responsive frontend using HTML, CSS, and Django templates to enhance
 ![App Screenshot](https://github.com/RohitRawat-08/ezCart/blob/master/static/ss/ezcart6.PNG)
 
 - Add address page
-  
+
 ![App Screenshot](https://github.com/RohitRawat-08/ezCart/blob/master/static/ss/ezcart7.PNG)
 
 - Product detail page
@@ -58,5 +58,12 @@ Developed a responsive frontend using HTML, CSS, and Django templates to enhance
 - order page
   
 ![App Screenshot](https://github.com/RohitRawat-08/ezCart/blob/master/static/ss/ezcart11.PNG)
+
+
+## Tech Stack
+
+**Client:** Html, Css, TailwindCSS, JavaScript 
+
+**Server:** Django, Python
 
 
