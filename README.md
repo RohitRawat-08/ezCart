@@ -9,6 +9,12 @@ Developed a responsive frontend using HTML, CSS, and Django templates to enhance
 - Added cart and checkout features to enable seamless online shopping.
 - Used Django’s built-in authentication system to enhance security and user experience.
 
+## Tech Stack
+
+**Client:** Html, Css, TailwindCSS, JavaScript 
+
+**Server:** Django, Python
+
 ## Screenshots
 
 - Login page
@@ -60,10 +66,5 @@ Developed a responsive frontend using HTML, CSS, and Django templates to enhance
 ![App Screenshot](https://github.com/RohitRawat-08/ezCart/blob/master/static/ss/ezcart11.PNG)
 
 
-## Tech Stack
-
-**Client:** Html, Css, TailwindCSS, JavaScript 
-
-**Server:** Django, Python
 
 
